@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#"
+     xml:base="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#jeSusjed -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#jeSusjed"/>
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#pozna -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#pozna"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#imaBrata -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#imaBrata">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#BRAT"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#SESTRA"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#imaSestru"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#imaSestru -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#imaSestru">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#BRAT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#SESTRA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#ziviUDrzavi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#ziviUDrzavi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#BRAT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#DRZAVA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#SESTRA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#imaGodina -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#imaGodina">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#BRAT"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#SESTRA"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#BRAT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#BRAT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#OSOBA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#DRZAVA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#DRZAVA"/>
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#OSOBA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#OSOBA"/>
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#SESTRA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#SESTRA"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#Filip -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#Filip">
+        <rdf:type rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#BRAT"/>
+        <imaGodina rdf:datatype="&xsd;integer">17</imaGodina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#Hrvatska -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#Hrvatska">
+        <rdf:type rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#DRZAVA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#Meksiko -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#Meksiko">
+        <rdf:type rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#DRZAVA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#Sara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#Sara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#SESTRA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#Tin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#Tin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#BRAT"/>
+        <pozna rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#Filip"/>
+        <ziviUDrzavi rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#Hrvatska"/>
+        <imaSestru rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#Sara"/>
+        <jeSusjed rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#Sara"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#VelikaBritanija -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#VelikaBritanija">
+        <rdf:type rdf:resource="http://www.semanticweb.org/korisnik/ontologies/2015/11/moja_ontologija_sbakota#DRZAVA"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
